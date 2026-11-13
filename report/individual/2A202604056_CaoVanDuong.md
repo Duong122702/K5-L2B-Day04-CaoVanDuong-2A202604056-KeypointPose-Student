@@ -140,17 +140,16 @@ Nguồn ảnh: COCO val2017 / Wikimedia Commons.
 
    Đánh giá sai giữa v=0 và v = 1, xác đichh kỹ bám sát guideline
 
-2. Một quy tắc bạn đề xuất thêm vào guideline (kèm ảnh ví dụ nếu có):
-
-  Không có
+2. Một quy tắc bạn đề xuất thêm vào guideline (kèm ảnh ví dụ nếu có):Không có
 
 3. Nhãn của bạn đi vào model ở đâu? Chọn một lỗi bạn đã sửa và nói nó sẽ làm model học sai thế nào (heatmap, trọng số trong loss, hay bước lật ảnh):
+Ở ảnh 000000091637.jpg, em bé quay lưng nên tay trái nằm ở bên trái khung hình. Nếu tôi đặt left_shoulder ở x = 227.5 thay vì x = 187.68, heatmap của kênh left_shoulder sẽ có đỉnh ở vai phải. Model sẽ thấy cùng một kênh lúc ở bên phải (người quay mặt), lúc ở bên trái (người quay lưng), nên không học được “trái/phải theo cơ thể” mà chỉ học vị trí tương đối trong khung hình. Khi lật ảnh để tăng cường dữ liệu và hoán đổi cặp trái/phải, nhãn sai này còn bị đảo thành nhãn đúng cho ảnh lật, làm mâu thuẫn nặng hơn. Kết quả là trên người quay lưng, model có xu hướng đoán nhầm cặp vai, khuỷu, hông, gối.
 
    
 
 ## 8. Khó khăn và lỗi kỹ thuật
 
-...
+Hơi khó khăn trong việc điều chỉnh đúng vị trí các keypoint trên skeleton cho người
 
 ## Bonus (nếu làm)
 
@@ -193,4 +192,4 @@ Kết quả `src/check_submission.py` cho `HoVaTen_bonus_persons.zip`:
 
 ## 9. Tài liệu tham khảo và công cụ AI đã dùng
 
-Claude - 
+Claude - sử dụng để format đoạn json export
