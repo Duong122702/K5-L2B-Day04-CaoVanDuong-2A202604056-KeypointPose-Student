@@ -1,0 +1,43 @@
+{
+ "mssv": "2A202604056",
+ "ten": "CaoVanDuong",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "caoduong2b",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000150500.jpg",
+  "000000241837.jpg",
+  "000000261732.jpg",
+  "000000493741.jpg",
+  "000000564304.jpg",
+  "000000091637.jpg",
+  "000000360811.jpg",
+  "000000580257.jpg",
+  "000000210604.jpg",
+  "000000391222.jpg",
+  "000000150192.jpg",
+  "000000381889.jpg"
+ ],
+ "faces": [
+  "face_155465.jpg",
+  "face_359139.jpg",
+  "face_559185.jpg",
+  "face_145621.jpg",
+  "face_185015.jpg",
+  "face_249336.jpg",
+  "face_13874.jpg",
+  "face_333134.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 5,
+   "job_id": 5,
+   "task_name": "persons-CaoVanDuong"
+  },
+  "faces": {
+   "task_id": 6,
+   "job_id": 6,
+   "task_name": "faces-CaoVanDuong"
+  }
+ }
+}
